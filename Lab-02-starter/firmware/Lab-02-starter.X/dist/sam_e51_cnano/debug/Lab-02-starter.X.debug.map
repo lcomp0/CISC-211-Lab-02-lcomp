@@ -170,17 +170,17 @@ section                    address  length [bytes]      (dec)  Description
 .bss                    0x200002fc            0x4           4  Uninitialized data 
 .bss                    0x20000300            0x4           4  Uninitialized data 
 .bss.isRTCExpired       0x20000304            0x1           1   
-.data.isUSARTTxComplete 0x20000305            0x1           1   
-.data.firstTime.9001    0x20000306            0x1           1   
-.data                   0x20000308           0x25          37  Initialized data 
+.data                   0x20000308           0x26          38  Initialized data 
+.data.isUSARTTxComplete 0x2000032e            0x1           1   
+.data.firstTime.9001    0x2000032f            0x1           1   
 .data.inp1Array         0x20000330           0x10          16   
 .data.inp2Array         0x20000340           0x10          16   
 .data.pass              0x20000350            0x4           4   
 .data.fail              0x20000354            0x4           4   
 .data.s2.9000           0x20000358            0x4           4   
-         Total RAM used  :       0x358         856  0.3% of 0x40000
+         Total RAM used  :       0x359         857  0.3% of 0x40000
         --------------------------------------------------------------------------
-            Total Data Memory used  :       0x358         856  0.3% of 0x40000
+            Total Data Memory used  :       0x359         857  0.3% of 0x40000
         --------------------------------------------------------------------------
 
 
@@ -221,7 +221,7 @@ Microchip PIC32 Memory-Usage Report By Module
           70           0           0          70          46    atoi.o                 libg-musl.a
           68           0           0          68          44    plib_port.o            build/sam_e51_cnano/debug/_ext/830661877/plib_port.o
           64           0           0          64          40    initialization.o       build/sam_e51_cnano/debug/_ext/570918426/initialization.o
-          12          37           0          49          31    asmFunc.o              build/sam_e51_cnano/debug/_ext/1360937237/asmFunc.o
+          12          38           0          50          32    asmFunc.o              build/sam_e51_cnano/debug/_ext/1360937237/asmFunc.o
           48           0           0          48          30    exceptions.o           build/sam_e51_cnano/debug/_ext/570918426/exceptions.o
           48           0           0          48          30    _aeabi_uldivmod.o      libgcc.a
           42           0           0          42          2a    __pop_float.o          libg-musl.a
@@ -242,7 +242,7 @@ Microchip PIC32 Memory-Usage Report By Module
            4           0           0           4           4    _dvmd_tls.o            libgcc.a
            0           0           4           4           4    __environ.o            libg-musl.a
 --------------------------------------------------------------------------------
-        7839          83         773        8695        21f7    dist/sam_e51_cnano/debug/Lab-02-starter.X.debug.elf
+        7839          84         773        8696        21f8    dist/sam_e51_cnano/debug/Lab-02-starter.X.debug.elf
 
 
 Discarded input sections
@@ -277,7 +277,7 @@ Discarded input sections
                 0x00000000       0x40 build/sam_e51_cnano/debug/_ext/831051564/plib_cmcc.o
  .text.CMCC_InvalidateAll
                 0x00000000       0x34 build/sam_e51_cnano/debug/_ext/831051564/plib_cmcc.o
- .debug_info    0x00000000      0x544 build/sam_e51_cnano/debug/_ext/831051564/plib_cmcc.o
+ .debug_info    0x00000000      0x5a1 build/sam_e51_cnano/debug/_ext/831051564/plib_cmcc.o
  .debug_abbrev  0x00000000       0x99 build/sam_e51_cnano/debug/_ext/831051564/plib_cmcc.o
  .debug_loc     0x00000000      0x198 build/sam_e51_cnano/debug/_ext/831051564/plib_cmcc.o
  .debug_aranges
@@ -464,7 +464,7 @@ Discarded input sections
                 0x00000000       0x16 build/sam_e51_cnano/debug/_ext/865175840/xc32_monitor.o
  .text._mon_putc
                 0x00000000       0x16 build/sam_e51_cnano/debug/_ext/865175840/xc32_monitor.o
- .debug_info    0x00000000      0x2b0 build/sam_e51_cnano/debug/_ext/865175840/xc32_monitor.o
+ .debug_info    0x00000000      0x30d build/sam_e51_cnano/debug/_ext/865175840/xc32_monitor.o
  .debug_abbrev  0x00000000       0x6c build/sam_e51_cnano/debug/_ext/865175840/xc32_monitor.o
  .debug_loc     0x00000000       0xb8 build/sam_e51_cnano/debug/_ext/865175840/xc32_monitor.o
  .debug_aranges
@@ -492,7 +492,7 @@ Discarded input sections
  .data          0x00000000        0x0 build/sam_e51_cnano/debug/_ext/570918426/libc_syscalls.o
  .bss           0x00000000        0x0 build/sam_e51_cnano/debug/_ext/570918426/libc_syscalls.o
  .text._exit    0x00000000        0xc build/sam_e51_cnano/debug/_ext/570918426/libc_syscalls.o
- .debug_info    0x00000000      0x318 build/sam_e51_cnano/debug/_ext/570918426/libc_syscalls.o
+ .debug_info    0x00000000      0x375 build/sam_e51_cnano/debug/_ext/570918426/libc_syscalls.o
  .debug_abbrev  0x00000000       0x4f build/sam_e51_cnano/debug/_ext/570918426/libc_syscalls.o
  .debug_loc     0x00000000       0x38 build/sam_e51_cnano/debug/_ext/570918426/libc_syscalls.o
  .debug_aranges
@@ -978,48 +978,48 @@ LOAD stack
  .comment       0x0000002b       0x2c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
  .comment       0x0000002b       0x2c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
 
-.debug_info     0x00000000    0x1184a
- .debug_info    0x00000000      0xb58 build/sam_e51_cnano/debug/_ext/7187140/plib_clock.o
- .debug_info    0x00000b58     0x1183 build/sam_e51_cnano/debug/_ext/831021835/plib_dmac.o
- .debug_info    0x00001cdb      0x71b build/sam_e51_cnano/debug/_ext/1220119669/plib_eic.o
- .debug_info    0x000023f6      0x32c build/sam_e51_cnano/debug/_ext/9336626/plib_evsys.o
- .debug_info    0x00002722     0x129b build/sam_e51_cnano/debug/_ext/830715028/plib_nvic.o
- .debug_info    0x000039bd      0xc40 build/sam_e51_cnano/debug/_ext/226030394/plib_nvmctrl.o
- .debug_info    0x000045fd      0xdaf build/sam_e51_cnano/debug/_ext/830661877/plib_port.o
- .debug_info    0x000053ac      0xff7 build/sam_e51_cnano/debug/_ext/1220132503/plib_rtc_timer.o
- .debug_info    0x000063a3     0x1318 build/sam_e51_cnano/debug/_ext/314480351/plib_sercom5_usart.o
- .debug_info    0x000076bb      0x339 build/sam_e51_cnano/debug/_ext/570918426/initialization.o
- .debug_info    0x000079f4     0x168b build/sam_e51_cnano/debug/_ext/570918426/interrupts.o
- .debug_info    0x0000907f      0x3f3 build/sam_e51_cnano/debug/_ext/570918426/exceptions.o
- .debug_info    0x00009472      0x855 build/sam_e51_cnano/debug/_ext/570918426/startup_xc32.o
- .debug_info    0x00009cc7     0x13df build/sam_e51_cnano/debug/_ext/1360937237/main.o
- .debug_info    0x0000b0a6       0x26 build/sam_e51_cnano/debug/_ext/1360937237/asmFunc.o
- .debug_info    0x0000b0cc      0x2c3 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
- .debug_info    0x0000b38f      0x620 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__libc_start_main.o)
- .debug_info    0x0000b9af      0x532 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(libc.o)
- .debug_info    0x0000bee1      0x463 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__sio_snprintf_cdns.o)
- .debug_info    0x0000c344      0x5bf c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__fmt_d.o)
- .debug_info    0x0000c903      0x534 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__fmt_s.o)
- .debug_info    0x0000ce37      0x3fe c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__pop_int.o)
- .debug_info    0x0000d235      0x404 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__pop_ptr.o)
- .debug_info    0x0000d639      0xd6b c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__printf_core.o)
- .debug_info    0x0000e3a4      0x2f8 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(atoi.o)
- .debug_info    0x0000e69c      0x2f8 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(memcpy.o)
- .debug_info    0x0000e994      0x2bc c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(memset.o)
- .debug_info    0x0000ec50      0x2a7 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(strlen.o)
- .debug_info    0x0000eef7      0x288 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(strcmp.o)
- .debug_info    0x0000f17f      0x350 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(tolower.o)
- .debug_info    0x0000f4cf      0x2ac c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__environ.o)
- .debug_info    0x0000f77b      0x270 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__errno_location.o)
- .debug_info    0x0000f9eb      0x4a3 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__int_vsnprintf.o)
- .debug_info    0x0000fe8e      0x440 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__cvt_u.o)
- .debug_info    0x000102ce      0x3da c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__pop_float.o)
- .debug_info    0x000106a8      0x476 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__int_vfprintf.o)
- .debug_info    0x00010b1e       0x26 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .debug_info    0x00010b44      0x7a9 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
- .debug_info    0x000112ed       0x26 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
- .debug_info    0x00011313      0x29c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
- .debug_info    0x000115af      0x29b c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
+.debug_info     0x00000000    0x11d60
+ .debug_info    0x00000000      0xbb5 build/sam_e51_cnano/debug/_ext/7187140/plib_clock.o
+ .debug_info    0x00000bb5     0x11e0 build/sam_e51_cnano/debug/_ext/831021835/plib_dmac.o
+ .debug_info    0x00001d95      0x778 build/sam_e51_cnano/debug/_ext/1220119669/plib_eic.o
+ .debug_info    0x0000250d      0x389 build/sam_e51_cnano/debug/_ext/9336626/plib_evsys.o
+ .debug_info    0x00002896     0x12f8 build/sam_e51_cnano/debug/_ext/830715028/plib_nvic.o
+ .debug_info    0x00003b8e      0xc9d build/sam_e51_cnano/debug/_ext/226030394/plib_nvmctrl.o
+ .debug_info    0x0000482b      0xe0c build/sam_e51_cnano/debug/_ext/830661877/plib_port.o
+ .debug_info    0x00005637     0x1054 build/sam_e51_cnano/debug/_ext/1220132503/plib_rtc_timer.o
+ .debug_info    0x0000668b     0x1375 build/sam_e51_cnano/debug/_ext/314480351/plib_sercom5_usart.o
+ .debug_info    0x00007a00      0x396 build/sam_e51_cnano/debug/_ext/570918426/initialization.o
+ .debug_info    0x00007d96     0x16e8 build/sam_e51_cnano/debug/_ext/570918426/interrupts.o
+ .debug_info    0x0000947e      0x450 build/sam_e51_cnano/debug/_ext/570918426/exceptions.o
+ .debug_info    0x000098ce      0x8b2 build/sam_e51_cnano/debug/_ext/570918426/startup_xc32.o
+ .debug_info    0x0000a180     0x143c build/sam_e51_cnano/debug/_ext/1360937237/main.o
+ .debug_info    0x0000b5bc       0x26 build/sam_e51_cnano/debug/_ext/1360937237/asmFunc.o
+ .debug_info    0x0000b5e2      0x2c3 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
+ .debug_info    0x0000b8a5      0x620 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__libc_start_main.o)
+ .debug_info    0x0000bec5      0x532 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(libc.o)
+ .debug_info    0x0000c3f7      0x463 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__sio_snprintf_cdns.o)
+ .debug_info    0x0000c85a      0x5bf c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__fmt_d.o)
+ .debug_info    0x0000ce19      0x534 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__fmt_s.o)
+ .debug_info    0x0000d34d      0x3fe c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__pop_int.o)
+ .debug_info    0x0000d74b      0x404 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__pop_ptr.o)
+ .debug_info    0x0000db4f      0xd6b c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__printf_core.o)
+ .debug_info    0x0000e8ba      0x2f8 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(atoi.o)
+ .debug_info    0x0000ebb2      0x2f8 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(memcpy.o)
+ .debug_info    0x0000eeaa      0x2bc c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(memset.o)
+ .debug_info    0x0000f166      0x2a7 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(strlen.o)
+ .debug_info    0x0000f40d      0x288 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(strcmp.o)
+ .debug_info    0x0000f695      0x350 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(tolower.o)
+ .debug_info    0x0000f9e5      0x2ac c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__environ.o)
+ .debug_info    0x0000fc91      0x270 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__errno_location.o)
+ .debug_info    0x0000ff01      0x4a3 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__int_vsnprintf.o)
+ .debug_info    0x000103a4      0x440 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__cvt_u.o)
+ .debug_info    0x000107e4      0x3da c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__pop_float.o)
+ .debug_info    0x00010bbe      0x476 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__int_vfprintf.o)
+ .debug_info    0x00011034       0x26 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_info    0x0001105a      0x7a9 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_info    0x00011803       0x26 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+ .debug_info    0x00011829      0x29c c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
+ .debug_info    0x00011ac5      0x29b c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
 
 .debug_abbrev   0x00000000     0x26ad
  .debug_abbrev  0x00000000      0x102 build/sam_e51_cnano/debug/_ext/7187140/plib_clock.o
@@ -1220,7 +1220,7 @@ LOAD stack
  .debug_ranges  0x00000668       0x10 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
  .debug_ranges  0x00000678       0x10 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
 
-.debug_line     0x00000000     0x4941
+.debug_line     0x00000000     0x4940
  .debug_line    0x00000000      0x286 build/sam_e51_cnano/debug/_ext/7187140/plib_clock.o
  .debug_line    0x00000286      0x516 build/sam_e51_cnano/debug/_ext/831021835/plib_dmac.o
  .debug_line    0x0000079c      0x1de build/sam_e51_cnano/debug/_ext/1220119669/plib_eic.o
@@ -1235,33 +1235,33 @@ LOAD stack
  .debug_line    0x00001beb       0xd8 build/sam_e51_cnano/debug/_ext/570918426/exceptions.o
  .debug_line    0x00001cc3      0x1ee build/sam_e51_cnano/debug/_ext/570918426/startup_xc32.o
  .debug_line    0x00001eb1      0x259 build/sam_e51_cnano/debug/_ext/1360937237/main.o
- .debug_line    0x0000210a       0x44 build/sam_e51_cnano/debug/_ext/1360937237/asmFunc.o
- .debug_line    0x0000214e       0xec c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
- .debug_line    0x0000223a      0x1cd c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__libc_start_main.o)
- .debug_line    0x00002407       0xb8 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(libc.o)
- .debug_line    0x000024bf      0x1a6 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__sio_snprintf_cdns.o)
- .debug_line    0x00002665      0x205 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__fmt_d.o)
- .debug_line    0x0000286a      0x1f4 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__fmt_s.o)
- .debug_line    0x00002a5e      0x206 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__pop_int.o)
- .debug_line    0x00002c64      0x1e6 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__pop_ptr.o)
- .debug_line    0x00002e4a      0x697 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__printf_core.o)
- .debug_line    0x000034e1      0x16d c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(atoi.o)
- .debug_line    0x0000364e       0xfc c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(memcpy.o)
- .debug_line    0x0000374a       0xe6 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(memset.o)
- .debug_line    0x00003830       0xe9 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(strlen.o)
- .debug_line    0x00003919       0xbd c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(strcmp.o)
- .debug_line    0x000039d6      0x15d c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(tolower.o)
- .debug_line    0x00003b33      0x101 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__environ.o)
- .debug_line    0x00003c34       0x9d c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__errno_location.o)
- .debug_line    0x00003cd1      0x1c1 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__int_vsnprintf.o)
- .debug_line    0x00003e92      0x1d1 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__cvt_u.o)
- .debug_line    0x00004063      0x16b c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__pop_float.o)
- .debug_line    0x000041ce      0x16e c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__int_vfprintf.o)
- .debug_line    0x0000433c       0x94 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
- .debug_line    0x000043d0      0x363 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
- .debug_line    0x00004733       0x94 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
- .debug_line    0x000047c7       0xb9 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
- .debug_line    0x00004880       0xc1 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
+ .debug_line    0x0000210a       0x43 build/sam_e51_cnano/debug/_ext/1360937237/asmFunc.o
+ .debug_line    0x0000214d       0xec c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(data_init.o)
+ .debug_line    0x00002239      0x1cd c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__libc_start_main.o)
+ .debug_line    0x00002406       0xb8 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(libc.o)
+ .debug_line    0x000024be      0x1a6 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__sio_snprintf_cdns.o)
+ .debug_line    0x00002664      0x205 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__fmt_d.o)
+ .debug_line    0x00002869      0x1f4 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__fmt_s.o)
+ .debug_line    0x00002a5d      0x206 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__pop_int.o)
+ .debug_line    0x00002c63      0x1e6 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__pop_ptr.o)
+ .debug_line    0x00002e49      0x697 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__printf_core.o)
+ .debug_line    0x000034e0      0x16d c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(atoi.o)
+ .debug_line    0x0000364d       0xfc c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(memcpy.o)
+ .debug_line    0x00003749       0xe6 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(memset.o)
+ .debug_line    0x0000382f       0xe9 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(strlen.o)
+ .debug_line    0x00003918       0xbd c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(strcmp.o)
+ .debug_line    0x000039d5      0x15d c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(tolower.o)
+ .debug_line    0x00003b32      0x101 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__environ.o)
+ .debug_line    0x00003c33       0x9d c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__errno_location.o)
+ .debug_line    0x00003cd0      0x1c1 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__int_vsnprintf.o)
+ .debug_line    0x00003e91      0x1d1 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__cvt_u.o)
+ .debug_line    0x00004062      0x16b c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__pop_float.o)
+ .debug_line    0x000041cd      0x16e c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libg-musl.a(__int_vfprintf.o)
+ .debug_line    0x0000433b       0x94 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7e-m+fp/hard\libgcc.a(_aeabi_uldivmod.o)
+ .debug_line    0x000043cf      0x363 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7e-m+fp/hard\libgcc.a(_udivmoddi4.o)
+ .debug_line    0x00004732       0x94 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7e-m+fp/hard\libgcc.a(_dvmd_tls.o)
+ .debug_line    0x000047c6       0xb9 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_clear.o)
+ .debug_line    0x0000487f       0xc1 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/../../../../pic32c/lib/thumb/v7e-m+fp/hard\libpic32c.a(pic32_data_init_copy.o)
 
 .debug_str      0x00000000      0x6f9
  .debug_str     0x00000000       0x1e build/sam_e51_cnano/debug/_ext/7187140/plib_clock.o
@@ -1445,10 +1445,10 @@ LOAD stack
  .bss.isRTCExpired
                 0x20000304        0x1 build/sam_e51_cnano/debug/_ext/1360937237/main.o
 
-.data%12        0x20000308       0x25
- .data          0x20000308       0x25 build/sam_e51_cnano/debug/_ext/1360937237/asmFunc.o
+.data%12        0x20000308       0x26
+ .data          0x20000308       0x26 build/sam_e51_cnano/debug/_ext/1360937237/asmFunc.o
                 0x20000308                nameStr
-                0x20000329                nameStrPtr
+                0x2000032a                nameStrPtr
 
 .data.inp1Array%13
                 0x20000330       0x10
@@ -1471,14 +1471,14 @@ LOAD stack
  .data.s2.9000  0x20000358        0x4 build/sam_e51_cnano/debug/_ext/1360937237/main.o
 
 .data.isUSARTTxComplete%18
-                0x20000305        0x1
+                0x2000032e        0x1
  .data.isUSARTTxComplete
-                0x20000305        0x1 build/sam_e51_cnano/debug/_ext/1360937237/main.o
+                0x2000032e        0x1 build/sam_e51_cnano/debug/_ext/1360937237/main.o
 
 .data.firstTime.9001%19
-                0x20000306        0x1
+                0x2000032f        0x1
  .data.firstTime.9001
-                0x20000306        0x1 build/sam_e51_cnano/debug/_ext/1360937237/main.o
+                0x2000032f        0x1 build/sam_e51_cnano/debug/_ext/1360937237/main.o
 
 .eh_frame%z1    0x00000000        0x0
  .eh_frame      0x00000000        0x0 c:/program files/microchip/xc32/v4.35/bin/bin/../../lib/gcc/pic32c/8.3.1/thumb/v7e-m+fp/hard/crtbegin.o
